@@ -613,6 +613,8 @@ namespace AlphaTab.Importer
                 NewSy();
             }
         }
+       
+
 
         private void Bars()
         {
