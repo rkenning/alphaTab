@@ -2831,7 +2831,7 @@ AlphaTab.Importer.AlphaTexImporter.prototype = {
     MetaData: function (){
         var anyMeta = false;
         while (this._sy == AlphaTab.Importer.AlphaTexSymbols.MetaCommand){
-            if ((this._syData) == "title"){
+            if ((this._syData).toString() == "title"){
                 this.NewSy();
                 if (this._sy == AlphaTab.Importer.AlphaTexSymbols.String){
                     this._score.Title = (this._syData).toString();
@@ -2842,7 +2842,7 @@ AlphaTab.Importer.AlphaTexImporter.prototype = {
                 this.NewSy();
                 anyMeta = true;
             }
-            else if ((this._syData) == "subtitle"){
+            else if ((this._syData).toString() == "subtitle"){
                 this.NewSy();
                 if (this._sy == AlphaTab.Importer.AlphaTexSymbols.String){
                     this._score.SubTitle = (this._syData).toString();
@@ -2853,7 +2853,7 @@ AlphaTab.Importer.AlphaTexImporter.prototype = {
                 this.NewSy();
                 anyMeta = true;
             }
-            else if ((this._syData) == "artist"){
+            else if ((this._syData).toString() == "artist"){
                 this.NewSy();
                 if (this._sy == AlphaTab.Importer.AlphaTexSymbols.String){
                     this._score.Artist = (this._syData).toString();
@@ -2864,7 +2864,7 @@ AlphaTab.Importer.AlphaTexImporter.prototype = {
                 this.NewSy();
                 anyMeta = true;
             }
-            else if ((this._syData) == "album"){
+            else if ((this._syData).toString() == "album"){
                 this.NewSy();
                 if (this._sy == AlphaTab.Importer.AlphaTexSymbols.String){
                     this._score.Album = (this._syData).toString();
@@ -2875,7 +2875,7 @@ AlphaTab.Importer.AlphaTexImporter.prototype = {
                 this.NewSy();
                 anyMeta = true;
             }
-            else if ((this._syData) == "words"){
+            else if ((this._syData).toString() == "words"){
                 this.NewSy();
                 if (this._sy == AlphaTab.Importer.AlphaTexSymbols.String){
                     this._score.Words = (this._syData).toString();
@@ -2886,7 +2886,7 @@ AlphaTab.Importer.AlphaTexImporter.prototype = {
                 this.NewSy();
                 anyMeta = true;
             }
-            else if ((this._syData) == "music"){
+            else if ((this._syData).toString() == "music"){
                 this.NewSy();
                 if (this._sy == AlphaTab.Importer.AlphaTexSymbols.String){
                     this._score.Music = (this._syData).toString();
@@ -2897,7 +2897,7 @@ AlphaTab.Importer.AlphaTexImporter.prototype = {
                 this.NewSy();
                 anyMeta = true;
             }
-            else if ((this._syData) == "copyright"){
+            else if ((this._syData).toString() == "copyright"){
                 this.NewSy();
                 if (this._sy == AlphaTab.Importer.AlphaTexSymbols.String){
                     this._score.Copyright = (this._syData).toString();
@@ -2908,7 +2908,7 @@ AlphaTab.Importer.AlphaTexImporter.prototype = {
                 this.NewSy();
                 anyMeta = true;
             }
-            else if ((this._syData) == "tempo"){
+            else if ((this._syData).toString() == "tempo"){
                 this.NewSy();
                 if (this._sy == AlphaTab.Importer.AlphaTexSymbols.Number){
                     this._score.Tempo = (this._syData);
@@ -2919,7 +2919,7 @@ AlphaTab.Importer.AlphaTexImporter.prototype = {
                 this.NewSy();
                 anyMeta = true;
             }
-            else if ((this._syData) == "capo"){
+            else if ((this._syData).toString() == "capo"){
                 this.NewSy();
                 if (this._sy == AlphaTab.Importer.AlphaTexSymbols.Number){
                     this._track.Capo = (this._syData);
@@ -2930,7 +2930,7 @@ AlphaTab.Importer.AlphaTexImporter.prototype = {
                 this.NewSy();
                 anyMeta = true;
             }
-            else if ((this._syData) == "tuning"){
+            else if ((this._syData).toString() == "tuning"){
                 this.NewSy();
                 if (this._sy == AlphaTab.Importer.AlphaTexSymbols.Tuning){
                     var tuning = [];
@@ -2946,7 +2946,7 @@ AlphaTab.Importer.AlphaTexImporter.prototype = {
                 }
                 anyMeta = true;
             }
-            else if ((this._syData) == "instrument"){
+            else if ((this._syData).toString() == "instrument"){
                 this.NewSy();
                 if (this._sy == AlphaTab.Importer.AlphaTexSymbols.Number){
                     var instrument = (this._syData);
